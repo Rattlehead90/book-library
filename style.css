@@ -1,5 +1,6 @@
 :root {
   --gray: rgb(214, 212, 212);
+  --lightgray: rgb(244, 238, 238);
 }
 
 body {
@@ -38,7 +39,41 @@ header {
 
 .buttons > .icon {
   margin-left: 2rem;
+  cursor: pointer;
 }
+
+main {
+  margin-top: 5rem;
+  justify-content: center;
+  display: flex;
+}
+
+.head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gray);
+  border-radius: 5px;
+  width: 800px;
+  padding: 10px 20px;
+}
+
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--lightgray);
+  border-radius: 5px;
+  width: 800px;
+  padding: 10px 20px;
+  margin-top: 5px;
+}
+
+.data-row > div,
+.head-row > div {
+  width: 7rem;
+}
+
 
 @keyframes wiggle {
   from {
