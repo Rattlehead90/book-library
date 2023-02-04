@@ -1,0 +1,57 @@
+:root {
+  --gray: rgb(214, 212, 212);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  vertical-align: middle;
+  background-color: var(--gray);
+  padding: 1rem 4rem;
+}
+
+.icon:hover {
+  animation: wiggle 0.5s linear infinite;
+}
+
+.icon {
+  width: auto;
+  height: 40px;
+  filter: invert(28%) sepia(24%) saturate(236%) hue-rotate(169deg) brightness(98%) contrast(90%);
+  margin-right: 2rem;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  flex-grow: 2;
+  text-align: center;
+}
+
+.buttons > .icon {
+  margin-left: 2rem;
+}
+
+@keyframes wiggle {
+  from {
+    transform: rotate(3deg);
+  }
+
+  50% {
+    filter: invert(30%) sepia(30%) saturate(1000%) hue-rotate(531deg) brightness(96%) contrast(89%);
+    transform: rotate(-6deg);
+  }
+
+  to {
+    
+    transform: rotate(3deg);
+  }
+}
