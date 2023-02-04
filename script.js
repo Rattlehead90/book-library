@@ -1,5 +1,9 @@
 let myLibrary = [];
-let table = document.querySelector('.table')
+let table = document.querySelector('.table');
+let button = document.querySelector('.buttons > img');
+let form = document.querySelector('.form');
+let click_count = 0;
+let main = document.querySelector('main');
 
 function Book(title, author, pages, read) {
   this.title = title;
@@ -42,11 +46,26 @@ function addBookToTable(book) {
 
   table.appendChild(row)
 }
-
+// To be removed in prod from here...
 const hobbit = new Book('The Hobbit', "J.R.R. Tolkien", 295, true);
-const lolita = new Book('V.V.Nabokov', 'Lolita', 336, true)
+const lolita = new Book('Lolita', 'V.V.Nabokov', 336, true)
 
 addBookToLibrary(hobbit)
 addBookToLibrary(lolita)
 
 myLibrary.forEach(addBookToTable)
+
+// up to here
+
+// Menu opening 
+
+button.addEventListener('click', ()=>{
+  click_count += 1;
+  if (click_count % 2 === 0) {
+    form.style.display = "none";
+    table.style.filter = "blur(0)";
+  } else {
+    form.style.display = "flex";
+    table.style.filter = "blur(2px)";
+  }
+})
