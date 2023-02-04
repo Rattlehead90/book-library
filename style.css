@@ -80,6 +80,22 @@ main {
   width: 7rem;
 }
 
+button {
+  background-color: rgb(102, 221, 102);
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+button:hover {
+  background-color: greenyellow;
+  cursor: pointer;
+}
+
+button:active {
+  filter: grayscale(70%);
+}
+
 .form {
   margin-top: -2rem;
   position: absolute;
