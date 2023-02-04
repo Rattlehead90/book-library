@@ -44,18 +44,13 @@ function addBookToTable(book) {
 
   table.appendChild(row)
 }
-// To be removed in prod from here...
 const hobbit = new Book('The Hobbit', "J.R.R. Tolkien", 295, true);
 const lolita = new Book('Lolita', 'V.V.Nabokov', 336, true)
 
 addBookToLibrary(hobbit)
 addBookToLibrary(lolita)
 
-myLibrary.forEach(addBookToTable)
-
-// up to here
-
-// Menu opening 
+myLibrary.forEach(addBookToTable) 
 
 function toggleForm() {
   click_count += 1;
