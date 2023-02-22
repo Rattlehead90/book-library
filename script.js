@@ -10,11 +10,13 @@ let author_input = document.querySelector('#author');
 let pages_input = document.querySelector('#pages');
 let read_input = document.querySelector('#read');
 
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
 }
 
 function addBookToLibrary(book) {
